@@ -3,15 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Screenshot Processor</title>
-    <style>
-      body { font-family: Arial, sans-serif; width: 250px; margin: 10px; }
-      button { width: 100%; padding: 10px; margin-top: 8px; }
-      pre { white-space: pre-wrap; font-size: 12px; background: #f7f7f7; padding: 5px; border-radius: 6px; }
-    </style>
+    <link rel="stylesheet" href="theme.css">
   </head>
   <body>
-    <button id="captureBtn">Capture Visible Area</button>
+    <div class="mode-selector">
+      <button id="manualModeBtn" class="mode-btn active">Manual Capture</button>
+      <button id="autoModeBtn" class="mode-btn">Auto Face Detection</button>
+    </div>
+
+    <div id="manualMode" class="mode-content">
+      <button id="captureBtn" class="capture-btn">📸 Capture Visible Area</button>
+    </div>
+
+    <div id="autoMode" class="mode-content" style="display: none;">
+      <button id="startDetectionBtn" class="capture-btn">🎥 Start Face Detection</button>
+      <button id="stopDetectionBtn" class="capture-btn" style="display: none;">⏹️ Stop Detection</button>
+      <div id="detectionStatus"></div>
+    </div>
+
     <pre id="log"></pre>
+    <div id="preview"></div>
 
     <script src="popup.js"></script>
   </body>
