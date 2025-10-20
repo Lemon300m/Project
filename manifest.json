@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "FYP In Progress",
+  "version": "1.0",
+  "description": "Capture screenshot as a variable for processing.",
+  "permissions": ["activeTab", "tabs", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "extension.png"
+  },
+  "host_permissions": ["<all_urls>"]
+}
+
