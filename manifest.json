@@ -3,7 +3,13 @@
   "name": "FYP In Progress",
   "version": "1.0",
   "description": "Capture screenshot as a variable for processing.",
-  "permissions": ["activeTab", "tabs", "scripting"],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage",
+    "notifications"
+  ],
   "background": {
     "service_worker": "background.js"
   },
